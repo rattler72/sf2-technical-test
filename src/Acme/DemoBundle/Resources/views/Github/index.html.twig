@@ -1,0 +1,16 @@
+{% extends 'AcmeDemoBundle::github_layout.html.twig' %}
+
+{% block title %}Symfony - Welcome{% endblock %}
+
+{% block content_header '' %}
+
+{% block content %}
+    {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
+
+    <h1 class="title">Welcome to the Github Browser!</h1>
+
+    <p>Application Environment: {{ app.environment }}</p>
+
+    <p>Created by Stacey Friesen.</p>
+
+{% endblock %}

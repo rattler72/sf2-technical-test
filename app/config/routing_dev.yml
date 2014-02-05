@@ -14,5 +14,26 @@ _main:
     resource: routing.yml
 
 # AcmeDemoBundle routes (to be removed)
-_acme_demo:
-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+#_acme_demo:
+#    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+
+_welcome:
+    pattern:  /
+    defaults: { _controller: AcmeDemoBundle:Github:index }
+
+_login_page:
+    path: /github/login
+    defaults:  { _controller: AcmeDemoBundle:Github:login }
+
+_browser_page:
+    path: /github/browser
+    defaults:  { _controller: AcmeDemoBundle:Github:browser }
+
+_github_secured:
+    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
+    type:     annotation
+
+_github:
+     resource: "@AcmeDemoBundle/Controller/GithubController.php"
+     type:     annotation
+     prefix:   /github
