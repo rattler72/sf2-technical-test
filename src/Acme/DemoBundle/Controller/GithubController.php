@@ -29,17 +29,22 @@ class GithubController extends Controller
      * @Route("/browser", name="_github_browser")
      * @Template()
      */
-    public function browserAction($name)
+    public function browserAction(Request $request)
     {
         // do something
-        
-        $client = new \Guzzle\Service\Client();
-        $req = $client->get('https://api.github.com/users/'.$name.'/repos');
+        $name = '';
+        $results = 'Sorry there are no results.';
+        $data = $request->request->all();
+        if (!empty($data['_username'])) {
+            $name = $data['_username'];
+            $client = new \Guzzle\Service\Client();
+            $req = $client->get('https://api.github.com/users/'.$data['_username'].'/repos');
 
-        $response = $req->send();
-        //print_r($response);
+            $response = $req->send();
+            $results = $response->getBody();
+        } 
 
-        return array('name' => $response->getBody());
+        return array('results' => $results,'name' => $name);
     }
 
     /**

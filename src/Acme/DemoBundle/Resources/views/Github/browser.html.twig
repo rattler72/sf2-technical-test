@@ -7,6 +7,24 @@
 {% block content %}
     {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
-    {{ name }}
+    <form action="{{ path("_github_browser") }}" method="post" name="gitbrowse">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="_username" value="" />
+        </div>
+
+        <button type="submit" class="sf-button">
+            <span class="border-l">
+                <span class="border-r">
+                    <span class="btn-bg">Search</span>
+                </span>
+            </span>
+        </button>
+    </form>
+
+    {% if name %}
+    <h2>You searched for: {{ name }}</h2>
+    {% endif %}
+    {{ results }}
 
 {% endblock %}
