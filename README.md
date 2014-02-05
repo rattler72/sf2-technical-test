@@ -41,3 +41,25 @@ https://api.github.com/users/USER_NAME/repos
 * Send the link to your forked GitHub project to your recruiter.
 
 *Good luck!**
+
+#My Notes - Stacey Friesen
+
+##Overview
+I spent about 3.5 hrs on this task. This is my first time actually developing with Symfony 2. As I mentioned in my phone interview, I have been developing most recently with Laravel 4, which is based off of the symfony components. Unfortunately, I did not finish the task as I had hoped. I was learning the nuances of the framework and in particular got hung up on the authentication and routing for the app. 
+
+##Setup
+When I received the task, I spent an hour setting up my environment. I had to upgrade from PHP 5.4 to 5.5... and had a few bumps upgrading that and composer. After everything was set up, I downloaded the framework and used composer to install the libraries. 
+
+##What I did not complete
+Since this was my first time using the framework and given the time constraints, I started by using the demo project to build the authentication functionality. I spent some time learning the conventions of both authentication and routing. As it went... I needed more time for this to fully understand. However I feel, this probably wouldn't take long for me to learn. 
+
+##What I did complete
+After struggling a little with the authentication and routing, I jumped into the Github API. Using Guzzle, I was able to create a simple user search. I stopped with about 30 mins to go.
+
+##Where to test?
+http://localhost/app_dev.php/ - Will give you the modified home page.
+http://localhost/app_dev.php/github/login - Is the login page using the demo credentials user / userpass
+http://localhost/app_dev.php/github/browser - This is the github search page. (I tried to secure this page, but removed it after having some trouble with authentication)
+
+##Final Thoughts
+I wish this had panned out better for me. I think I could work well with this framework and feel I could get up to speed in a short amount of time (few days...). I hope you consider my effort here and I'd love to prove to you guys that I'm the right fit for the job. Cheers!
