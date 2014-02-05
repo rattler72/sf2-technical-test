@@ -57,9 +57,9 @@ Since this was my first time using the framework and given the time constraints,
 After struggling a little with the authentication and routing, I jumped into the Github API. Using Guzzle, I was able to create a simple user search. I stopped with about 30 mins to go.
 
 ##Where to test?
-http://localhost/app_dev.php/ - Will give you the modified home page.
-http://localhost/app_dev.php/github/login - Is the login page using the demo credentials user / userpass
-http://localhost/app_dev.php/github/browser - This is the github search page. (I tried to secure this page, but removed it after having some trouble with authentication)
+* http://localhost/app_dev.php/ - Will give you the modified home page.
+* http://localhost/app_dev.php/github/login - Is the login page using the demo credentials user / userpass
+* http://localhost/app_dev.php/github/browser - This is the github search page. (I tried to secure this page, but removed it after having some trouble with authentication)
 
 ##Final Thoughts
 I wish this had panned out better for me. I think I could work well with this framework and feel I could get up to speed in a short amount of time (few days...). I hope you consider my effort here and I'd love to prove to you guys that I'm the right fit for the job. Cheers!
