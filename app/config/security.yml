@@ -23,7 +23,7 @@ security:
             security: false
 
         secured_area:
-            pattern:    ^/github/browser
+            pattern:    ^/github/browser2
             form_login:
                 check_path: _security_check
                 login_path: _github_login

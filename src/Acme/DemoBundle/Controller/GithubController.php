@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Guzzle\Service\Client;
 
 /**
  * @Route("/")
@@ -28,10 +29,17 @@ class GithubController extends Controller
      * @Route("/browser", name="_github_browser")
      * @Template()
      */
-    public function browserAction()
+    public function browserAction($name)
     {
         // do something
-        return array('name' => 'Stacey');
+        
+        $client = new \Guzzle\Service\Client();
+        $req = $client->get('https://api.github.com/users/'.$name.'/repos');
+
+        $response = $req->send();
+        //print_r($response);
+
+        return array('name' => $response->getBody());
     }
 
     /**
